@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Dgts
+{
+ public static void main(String args[])
+ {
+   Scanner input = new Scanner(System.in);
+   System.out.println("Enter the number: ");
+   int nm = input.nextInt();
+   int temp = nm;
+   int sum = 0;
+   int d;
+   while(temp > 0)
+   {
+     d = temp % 10;
+     sum = sum + d;
+     temp = temp/10;
+   }
+   System.out.println("Sum = " + sum);
+ }
+}

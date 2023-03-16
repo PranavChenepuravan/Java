@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Armst
+{
+ public static void main(String args[])
+ {
+  System.out.println("Enter the number: ");
+  Scanner input = new Scanner(System.in);
+  int nm = input.nextInt();
+  int temp = nm;
+  int sum = 0;
+  int k = 0;
+  while(nm > 0)
+  {
+    k = nm % 10;
+    sum = sum + (k * k * k);
+    nm = nm / 10;
+  }
+  if(sum == temp)
+  {
+    System.out.println(temp + " Armstrong");
+  }
+ }
+}

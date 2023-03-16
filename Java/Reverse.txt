@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Rvrs
+{
+ public static void main(String args[])
+ {
+  System.out.print("Enter the number: ");
+  Scanner input = new Scanner(System.in);
+  int nm = input.nextInt();
+  int temp = nm;
+  int rs = 0;
+  int k = 0;
+  while(temp > 0)
+  {
+    k = temp % 10;
+    rs = (rs + k) * 10;
+    temp = temp / 10;
+  }
+  rs = rs / 10;
+  System.out.println(rs);
+ }
+}
