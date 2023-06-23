@@ -1,0 +1,108 @@
+package Arithematic;
+interface Process
+{
+ public void calcs(int a,int b);
+}
+
+public class Sum1 implements Process
+{
+ public void calcs(int a, int b)
+  {
+    int f = a;
+    int s = b;
+    int done = f + s;
+    System.out.println(a + " + " + b + " = " + done);
+  }
+}
+
+*************************************************************
+
+
+package Arithematic;
+interface Process
+{
+ public void calcd(int a,int b);
+}
+
+public class Dif1 implements Process
+{
+ public void calcd(int a, int b)
+  {
+    int f = a;
+    int s = b;
+    int done = f - s;
+    System.out.println(a + " - " + b + " = " + done);
+  }
+}
+
+
+************************************************************
+
+
+package Arithematic;
+interface Process
+{
+ public void calcm(int a,int b);
+}
+
+public class Mul1 implements Process
+{
+ public void calcm(int a, int b)
+  {
+    int f = a;
+    int s = b;
+    int done = f * s;
+    System.out.println(a + " * " + b + " = " + done);
+  }
+}
+
+
+***********************************************************
+
+
+package Arithematic;
+interface Process
+{
+ public void calcdv(int a,int b);
+}
+
+public class Div1 implements Process
+{
+ public void calcdv(int a, int b)
+  {
+    int f = a;
+    int s = b;
+    int di = f / s;
+    System.out.println(a + " / " + b + " = " + di);
+  }
+}
+
+
+**********************************************************
+
+
+import Arithematic.*;
+import java.util.Scanner;
+class Pcall1
+{
+ public static void main(String args[])
+  {
+    Scanner input = new Scanner(System.in);    
+    System.out.println("Enter the first number ");
+    int f = input.nextInt();
+    System.out.println("Enter the second number ");
+    int s = input.nextInt();
+    Arithematic.Sum1 a1 = new Arithematic.Sum1();
+    a1.calcs(f , s);
+    
+    Arithematic.Dif1 b1 = new Arithematic.Dif1();
+    b1.calcd(f , s);
+
+    Arithematic.Mul1 c1 = new Arithematic.Mul1();
+    c1.calcm(f , s);
+
+    Arithematic.Div1 d1 = new Arithematic.Div1();
+    d1.calcdv(f , s);
+    
+  }
+}
