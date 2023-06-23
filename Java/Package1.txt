@@ -1,0 +1,99 @@
+package Graphic;
+interface Actions
+{
+ public void show(int le, int br);
+}
+public class Rectangle2 implements Actions
+{
+ public void show(int le, int br)
+  {
+    int a = le;
+    int b = br;
+    int ar = a * b;
+    System.out.println("Area = " + ar);
+  }
+}
+
+************************************************************
+
+package Graphic;
+interface Actions
+{
+  public void show(int le);
+}
+public class Square2 implements Actions
+{
+ public void show(int le)
+  {
+    int l = le;
+    int ar = le * le; 
+    System.out.println("Area = " + ar);
+  }
+}
+
+***********************************************************
+
+package Graphic;
+interface Actions
+{
+  public void show(int br, int he);
+}
+public class Triangle2 implements Actions
+{
+ public void show(int br, int he)
+  {
+    int b = br;
+    int h = he;
+    double ar = 0.5 * b * h;
+    System.out.println("Area = " + ar);
+  }
+}
+
+**********************************************************
+
+package Graphic;
+interface Actions
+{
+  public void show(int ra);
+}
+public class Circle2 implements Actions
+{
+ public void show(int ra)
+  {
+    int r = ra;
+    double ar = 3.14 * r * r;
+    System.out.println("Area = " + ar); 
+  }
+}
+
+**********************************************************
+
+import Graphic.*;
+import java.util.Scanner;
+class Pcall2
+{
+ public static void main(String args[])
+  {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the length of the square ");
+    int lsq = input.nextInt();
+    Graphic.Square2 a1 = new Graphic.Square2();
+    a1.show(lsq);
+    System.out.println("Enter the heigth of the triangle ");
+    int htr = input.nextInt();
+    System.out.println("Enter the bredth of the triangle ");
+    int btr = input.nextInt();
+    Graphic.Triangle2 b1 = new Graphic.Triangle2();
+    b1.show(htr , btr);
+    System.out.println("Enter the length of the rectangle ");
+    int lrt = input.nextInt();
+    System.out.println("Enter the bredth of the rectangle ");
+    int brt = input.nextInt();
+    Graphic.Rectangle2 c1 = new Graphic.Rectangle2();
+    c1.show(lrt , brt);
+    System.out.println("Enter the radius of circle ");
+    int rcr = input.nextInt();
+    Graphic.Circle2 d1 = new Graphic.Circle2();
+    d1.show(rcr);
+  }
+}
