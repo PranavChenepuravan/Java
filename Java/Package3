@@ -1,0 +1,69 @@
+import SORT.*;
+class Spack
+{
+ public static void main(String args[])
+  {
+    SORT.Subjects s1 = new SORT.Subjects();
+    s1.name();
+    SORT.Numbers1 n1 = new SORT.Numbers1();
+    n1.elem();
+  }
+}
+
+-------------------------------------------------------------------------------
+
+package SORT;
+public class Subjects
+ {
+   public void name()
+    {
+      String arr1[] = {"Hindi","Maths","English","IT","Biology"};
+      int n = arr1.length;
+      for(int i = 0;i < n - 1;i++)
+       {
+         for(int j = 0; j < n -1 -i;j++)
+          {
+            if(arr1[j].compareTo(arr1[j+1])>0)
+             {
+               String temp = arr1[j+1];
+               arr1[j+1] = arr1[j];
+               arr1[j] = temp;
+             }
+          }
+       }
+      for(int i = 0;i < n;i++)
+       {
+         System.out.println(arr1[i]);
+       }
+    }
+ }
+
+----------------------------------------------------------------------------------
+
+package SORT;
+public class Numbers1
+{
+ public void elem()
+  {
+    int arr2[] = {3,5,2,1,7};
+    int n2 = arr2.length;
+    int temp;
+    for(int i = 0; i < n2; i++)
+     {
+       for(int j = i+1; j < n2; j++)
+        {
+          if(arr2[i] > arr2[j])
+           {
+             temp = arr2[i];
+             arr2[i] = arr2[j];
+             arr2[j] = temp;
+           }
+        }
+      }
+     for(int j = 0; j < n2; j++)
+      {
+        System.out.println(arr2[j]);
+      }
+  }
+}
+
